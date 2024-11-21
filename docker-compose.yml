@@ -1,0 +1,31 @@
+version: '3.3'
+
+services:
+  db:
+    image: mariadb:10.5
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: no
+    environment:
+      MYSQL_ROOT_PASSWORD: ewc
+      MYSQL_DATABASE: ewc
+      MYSQL_USER: ewc
+      MYSQL_PASSWORD: ewc
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    ports:
+      - "8000:80"
+    restart: always
+    volumes:
+      - ./ewc:/var/www/html/wp-content/themes/ewc
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: ewc
+      WORDPRESS_DB_PASSWORD: ewc
+      WORDPRESS_DB_NAME: ewc
+
+volumes:
+  db_data: {}
