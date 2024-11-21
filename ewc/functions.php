@@ -1,18 +1,27 @@
-<?php 
+<?php
 
-  // register webpack compiled js and css with theme
-  function enqueue_webpack_scripts() {
-    
-    $cssFilePath = glob( get_template_directory() . '/css/build/main.min.*.css' );
-    $cssFileURI = get_template_directory_uri() . '/css/build/' . basename($cssFilePath[0]);
-    wp_enqueue_style( 'main_css', $cssFileURI );
-    
-    $jsFilePath = glob( get_template_directory() . '/js/build/main.min.*.js' );
-    $jsFileURI = get_template_directory_uri() . '/js/build/' . basename($jsFilePath[0]);
-    wp_enqueue_script( 'main_js', $jsFileURI , null , null , true );
-     
-  }
-  add_action( 'wp_enqueue_scripts', 'enqueue_webpack_scripts' );
+require get_template_directory() . '/inc/theme-settings/theme-settings.php';
+
+/**
+ * Lang switcher polylang
+ */
+require get_template_directory() . '/inc/lang-switcher.php';
+
+require get_template_directory() . '/inc/contact-form7-settings.php';
+
+// register webpack compiled js and css with theme
+function enqueue_webpack_scripts()
+{
+
+  $cssFilePath = glob(get_template_directory() . '/css/build/main.min.*.css');
+  $cssFileURI = get_template_directory_uri() . '/css/build/' . basename($cssFilePath[0]);
+  wp_enqueue_style('main_css', $cssFileURI);
+
+  $jsFilePath = glob(get_template_directory() . '/js/build/main.min.*.js');
+  $jsFileURI = get_template_directory_uri() . '/js/build/' . basename($jsFilePath[0]);
+  wp_enqueue_script('main_js', $jsFileURI, null, null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_webpack_scripts');
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -69,3 +78,47 @@ function ewc_setup()
   add_theme_support('customize-selective-refresh-widgets');
 }
 add_action('after_setup_theme', 'ewc_setup');
+
+// Регистрация кастомного типа записи "Часто задаваемые вопросы"
+function register_faq_post_type()
+{
+  $labels = array(
+    'name'              =>
+    __('FAQ', 'ecw'),
+    'singular_name'     =>
+    __('FAQ', 'ecw'),
+    'add_new'           =>
+    __('Add', 'ecw'),
+    'add_new_item'      =>
+    __('Add', 'ecw'),
+    'edit_item'         =>
+    __('Edit', 'ecw'),
+    'new_item'          =>
+    __('Add New', 'ecw'),
+    'view_item'         =>
+    __('View', 'ecw'),
+    'parent_item_colon' => '',
+    'menu_name'         => __('FAQ', 'ecw'),
+  );
+
+  $args = array(
+    'labels'             => $labels,
+    'public'             => true,
+    'publicly_queryable' => false,
+    'show_ui'            => true,
+    'show_in_menu'       => true,
+    'query_var'          => true,
+    'rewrite'            => array('slug' => 'faq'),
+    'capability_type'    => 'post',
+    'has_archive'        => false,
+    'hierarchical'       => false,
+    'menu_position'      => null,
+    'supports'           => array('title', 'editor',),
+    'show_in_rest'       => true,
+    'menu_icon'          => 'dashicons-screenoptions',
+  );
+
+  register_post_type('faq', $args);
+}
+
+add_action('init', 'register_faq_post_type');
