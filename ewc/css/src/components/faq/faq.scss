@@ -1,0 +1,109 @@
+
+
+.faq {
+    padding: 35px 0;
+}
+
+.faq__headline {
+    margin-top: 0;
+    margin-bottom: 2em;
+}
+
+.faq__accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.accordion-content {
+    position: relative;
+    opacity: 0;
+    max-height: 0;
+    padding: 0 20px;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear, margin-top 200ms linear;
+    will-change: opacity, max-height, margin-top;
+    margin-bottom: 0;
+    margin-top: 0;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 5px;
+        background-color: var(--color-accent);
+    }
+
+    p {
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.accordion-title {
+    padding-right: 40px;
+
+    @include media-tablet {
+        font-size: 20px;
+    }
+}
+
+.faq__button {
+    padding: 20px 30px;
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    font-weight: 600;
+    border: none;
+    background: none;
+    outline: none;
+    background-color: var(--color-white-dark);
+    border-radius: 20px;
+    @include transition;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+    }
+
+    .icon {
+        transition: transform 0.4s 200ms;
+        display: inline-block;
+        position: absolute;
+        right: 30px;
+        width: 18px;
+        height: 12px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        transform: translateY(50%);
+        background-image: url('data:image/svg+xml,<svg width="18.194092" height="12.000000" viewBox="0 0 18.1941 12" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><desc>Created with Pixso.</desc><defs/><path id="Vector" d="M15.2 0L9.1 6L2.99 0L0 3.04L9.1 12L18.19 3.04L15.2 0Z" fill="%23D6DFE6" fill-opacity="1.000000" fill-rule="nonzero"/></svg>');
+    }
+
+    &[aria-expanded='true'] {
+        background-color: var(--color-blue);
+        color: var(--color-white);
+
+        .icon {
+            transform: rotate(180deg) translateY(-50%);
+        }
+
+        + .accordion-content {
+            opacity: 1;
+            max-height: 100%;
+            overflow-y: auto;
+            transition: all 200ms linear;
+            will-change: opacity, max-height, margin-top;
+            margin-top: 30px;
+
+        }
+    }
+}

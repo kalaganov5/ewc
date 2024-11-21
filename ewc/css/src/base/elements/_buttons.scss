@@ -1,0 +1,65 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	background-color: var(--color-white);
+	color: var(--color-black);
+	padding: 25px 30px;
+	display: inline-block;
+	width: auto;
+	border-radius: 20px;
+	border-bottom: 3px solid var(--color-gray);
+	text-decoration: none;
+	cursor: pointer;
+	@include transition;
+
+	&:visited {
+		color: var(--color-black);
+	}
+
+	&:hover,
+	&:focus {
+		background-color: var(--color-gray);
+		box-shadow: 0 5px 25px 0px rgba(243, 249, 252, 0.35);
+	}
+}
+
+.button {
+	background-color: var(--color-white);
+	color: var(--color-black);
+	padding: 25px 30px;
+	display: inline-block;
+	width: auto;
+	border-radius: 20px;
+	border-bottom: 3px solid var(--color-gray);
+	text-decoration: none;
+	cursor: pointer;
+	@include transition;
+
+	&:visited {
+		color: var(--color-black);
+	}
+
+	&:hover,
+	&:focus {
+		background-color: var(--color-gray);
+		box-shadow: 0 5px 25px 0px rgba(243, 249, 252, 0.35);
+	}
+
+	&--accent {
+		background-color: #2383BC;
+		color: var(--color-white);
+		border-bottom-color: #1571A6;
+
+		&:hover,
+		&:focus {
+			background-color: #328FC6;
+			color: var(--color-white);
+		}
+
+		&:visited {
+			color: var(--color-white);
+
+		}
+	}
+}

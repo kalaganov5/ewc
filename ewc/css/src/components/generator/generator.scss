@@ -1,0 +1,22 @@
+.generator {
+  padding: 70px 0;
+}
+
+.generator__headline {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 35px;
+
+  @include media-tablet {
+    margin-bottom: 50px;
+  }
+}
+
+.generator__subtext {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.generator__body {
+  padding-bottom: 0;
+}

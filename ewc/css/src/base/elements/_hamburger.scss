@@ -1,0 +1,96 @@
+$line-color: var(--color-white);
+$line-color-hover: var(--color-white-dark);
+$width: 35px;
+$height: 28px;
+
+.hamburger {
+  display: block;
+  z-index: 10;
+  position: relative;
+
+  @include media-laptop {
+    display: none;
+  }
+}
+
+.hamburger__button {
+  position: relative;
+  right: 0;
+  left: 0;
+  width: $width;
+  height: $height;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+
+  &--line {
+    border-radius: 5px;
+    @include transition;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    transform: rotate(0);
+
+    background-color: $line-color;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 70%;
+    }
+
+    &:nth-child(3) {
+      bottom: 0;
+    }
+  }
+
+  &--open {
+
+    .hamburger__button--line:nth-child(2n-1) {
+      top: 14px;
+      transform: rotate(-45deg);
+    }
+
+    span.hamburger__button--line:nth-child(2) {
+      width: 0;
+    }
+
+    .hamburger__button--line:last-child {
+      bottom: 18px;
+      transform: rotate(45deg);
+    }
+
+    & {
+      .hamburger__button--line {
+        background-color: $line-color-hover;
+      }
+    }
+
+    &:hover {
+      span.hamburger__button--line {
+        background-color: $line-color-hover;
+      }
+    }
+  }
+
+  &:hover {
+    .hamburger__button--line {
+      background-color: $line-color-hover;
+      width: 100%;
+    }
+  }
+}

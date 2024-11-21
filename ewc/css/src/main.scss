@@ -1,8 +1,25 @@
 // fonts
-@import './font/opensans';
+@import './font/index';
 
-// layout and structure
-@import './layout';
+// Import variables and mixins.
+@import "abstracts/abstracts";
+
+/* Normalize
+--------------------------------------------- */
+@import "generic/normalize";
+
+/* Box sizing
+--------------------------------------------- */
+@import "generic/box-sizing";
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+@import "base/base";
+
+
+@import "plugins/contact-form7/contact-form7";
+
 
 // main content pane styles
-@import './components/content';
+@import './components/_components';

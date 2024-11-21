@@ -1,0 +1,184 @@
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get($columns, $numberColumns) - (($columns__margin * ($numberColumns - 1)) / $numberColumns );
+}
+
+/**
+ * Helper mixins
+*/
+
+// Clearfix
+// http://www.cssmojo.com/latest_new_clearfix_so_far/
+// Other clearfix options: https://github.com/stubbornella/oocss/blob/master/oocss/src/components/utils/_clearfix-me.scss
+@mixin clearfix {
+	&::after {
+		clear: both;
+		content: '';
+		display: table;
+	}
+}
+
+// Text selection
+@mixin text-selection($color-selection, $color-selection-bg) {
+	::-moz-selection {
+		// sass-lint:disable-line no-vendor-prefixes
+		background: $color-selection-bg;
+		color: $color-selection;
+		text-shadow: none;
+	}
+
+	::selection {
+		background: $color-selection-bg;
+		color: $color-selection;
+		text-shadow: none;
+	}
+}
+
+//Placeholders
+//Usage:
+//@include placeholder;
+@mixin placeholder {
+
+	// sass-lint:disable no-vendor-prefixes
+	::-webkit-input-placeholder {
+		@content
+	}
+
+	:-moz-placeholder {
+		@content
+	}
+
+	::-moz-placeholder {
+		@content
+	}
+
+	:-ms-input-placeholder {
+		@content
+	}
+}
+
+@mixin transition($property: all, $delay: 200ms) {
+	transition: $property $delay linear;
+}
+
+@mixin reset-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+@mixin media-mobile {
+	@media (min-width: 360px) {
+		@content;
+	}
+}
+
+@mixin media-mobile-m {
+	@media (min-width: 375px) {
+		@content;
+	}
+}
+
+@mixin media-mobile-l {
+	@media (min-width: 425px) {
+		@content;
+	}
+}
+
+@mixin media-mobile-xl {
+	@media (min-width: 640px) {
+		@content;
+	}
+}
+
+@mixin media-tablet {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin media-laptop {
+	@media (min-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin media-desktop {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin media-desktop-xl {
+	@media (min-width: 1600px) {
+		@content;
+	}
+}
+
+// calc ratio https://ratiobuddy.com/
+@mixin adaptive-image($width, $height) {
+	$aspect-ratio: $height / $width * 100%;
+	//padding: 0 0 $aspect-ratio 0;
+	//padding: 0 0 calc($height / $width) * 100% 0;
+	padding: 0 0 $aspect-ratio 0; ///
+	overflow: hidden;
+	position: relative;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+@mixin visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	/* Устаревший метод для скрытия элемента */
+	clip: rect(1px, 1px, 1px, 1px);
+	/* Метод для скрытия элемента */
+	width: 1px !important;
+	height: 1px !important;
+	overflow: hidden;
+	white-space: nowrap;
+	/* Предотвращает перенос текста */
+}
+
+@mixin outline {
+	outline: 1px solid red;
+}
+
+@mixin text-no-margin {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+@mixin p-fist-last-no-margin {
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+@mixin block-gap {
+	margin-top: 35px;
+	padding-top: 35px;
+
+	@include media-laptop {
+		margin-top: 70px;
+		padding-top: 70px;
+	}
+}

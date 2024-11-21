@@ -1,0 +1,46 @@
+.footer {
+    background-color: var(--color-button-light);
+    padding: 70px 0;
+}
+
+.footer__headline {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.footer__logo .logo__link {
+    color: var(--color-blue);
+    @include transition(color);
+    display: inline-block;
+
+    &:hover,
+    &:focus,
+    &:visited {
+        color: var(--color-blue-dark);
+    }
+}
+
+.footer__main {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer__navigation {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.footer__bottom {
+    padding-top: 40px;
+    text-align: center;
+    border-top: 1px solid #E5EBEF;
+    color: rgb(34, 34, 34);
+}

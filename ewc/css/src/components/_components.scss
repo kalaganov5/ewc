@@ -1,0 +1,45 @@
+/* Navigation
+--------------------------------------------- */
+@import "navigation/navigation";
+
+/* Posts and pages
+--------------------------------------------- */
+@import "content/posts-and-pages";
+
+/* Comments
+--------------------------------------------- */
+@import "comments/comments";
+
+/* Widgets
+--------------------------------------------- */
+@import "widgets/widgets";
+
+/* Media
+--------------------------------------------- */
+@import "media/media";
+
+/* Captions
+--------------------------------------------- */
+@import "media/captions";
+
+/* Galleries
+--------------------------------------------- */
+@import "media/galleries";
+
+// components
+@import "header/header.scss";
+@import "lang-switcher/lang-switcher";
+@import "logo/logo.scss";
+@import "intro/intro.scss";
+@import "presentation/presentation.scss";
+@import "features/features.scss";
+@import "generator/generator.scss";
+@import "quiz.scss";
+@import "reviews/reviews.scss";
+@import "security/security.scss";
+@import "tariff/tariff.scss";
+@import "team/team.scss";
+@import "faq/faq.scss";
+@import "contact/contact.scss";
+@import "footer/footer.scss";
+@import "social/social.scss";

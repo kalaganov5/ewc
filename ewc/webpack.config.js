@@ -1,76 +1,71 @@
 const path = require('path');
-
-// css extraction and minification
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-
-// clean out build dir in-between builds
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = [
   {
     entry: {
-      'main': [
-        './js/src/main.js',
-        './css/src/main.scss'
-      ]
+      main: ['./js/src/main.js', './css/src/main.scss']
     },
     output: {
       filename: './js/build/[name].min.[fullhash].js',
-      path: path.resolve(__dirname)
+      path: path.resolve(__dirname),
     },
     module: {
       rules: [
-        // js babelization
         {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
-          loader: 'babel-loader'
+          loader: 'babel-loader',
         },
-        // sass compilation
         {
           test: /\.(sass|scss)$/,
-          use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+          use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
         },
-        // loader for webfonts (only required if loading custom fonts)
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/,
           type: 'asset/resource',
           generator: {
             filename: './css/build/font/[name][ext]',
-          }
+          },
         },
-        // loader for images and icons (only required if css references image files)
         {
           test: /\.(png|jpg|gif)$/,
           type: 'asset/resource',
           generator: {
             filename: './css/build/img/[name][ext]',
-          }
+          },
         },
-      ]
+      ],
     },
     plugins: [
-      // clear out build directories on each build
       new CleanWebpackPlugin({
-        cleanOnceBeforeBuildPatterns: [
-          './js/build/*',
-          './css/build/*'
-        ]
+        cleanOnceBeforeBuildPatterns: ['./js/build/*', './css/build/*'],
       }),
-      // css extraction into dedicated file
       new MiniCssExtractPlugin({
-        filename: './css/build/main.min.[fullhash].css'
+        filename: './css/build/main.min.[fullhash].css',
       }),
+      new BrowserSyncPlugin(
+        {
+          host: 'localhost',
+          port: 3000,
+          proxy: 'http://localhost:8000/', // Укажи адрес своего локального сервера WordPress
+          files: [
+            './**/*.php', // Следим за изменениями PHP файлов
+            './css/build/*.css', // Следим за CSS
+            './js/build/*.js', // Следим за JS
+          ],
+        },
+        {
+          reload: true, // Автоперезагрузка страницы
+        }
+      ),
     ],
     optimization: {
-      // minification - only performed when mode = production
-      minimizer: [
-        // js minification - special syntax enabling webpack 5 default terser-webpack-plugin 
-        `...`,
-        // css minification
-        new CssMinimizerPlugin(),
-      ]
+      minimizer: [`...`, new CssMinimizerPlugin()],
     },
+    watch: true, // Включаем режим watch
   }
 ];

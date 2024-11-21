@@ -1,0 +1,21 @@
+.headline {
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--color-black);
+  text-align: center;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+
+  @include media-mobile-xl {
+    font-size: 40px;
+  }
+
+  @include media-laptop {
+    font-size: 48px;
+  }
+}

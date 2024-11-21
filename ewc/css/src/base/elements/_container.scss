@@ -1,0 +1,10 @@
+.container {
+  padding-right: var(--container-gap);
+  padding-left: var(--container-gap);
+  max-width: 1200px;
+
+  @include media-laptop {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
