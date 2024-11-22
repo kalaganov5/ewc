@@ -52,12 +52,12 @@ get_header();
   <div class="intro__container container">
     <div class="intro__info">
       <h1 class="intro__headline headline">
-        <?php _e('Виджет социальных сетей для вашего сайта, который позволит быстро начать общаться с&nbsp;вашими клиентами', 'ecw'); ?>
+        <?php _e('Виджет социальных сетей для вашего сайта, который позволит быстро начать общаться с&nbsp;вашими клиентами', 'ewc'); ?>
       </h1>
       <p class="intro__text">
-        <?php _e('Установите виджет мессенджера или социальной сети на&nbsp;ваш сайт и&nbsp;выберите визуальный стиль, соответствующий вашему дизайну', 'ecw'); ?>
+        <?php _e('Установите виджет мессенджера или социальной сети на&nbsp;ваш сайт и&nbsp;выберите визуальный стиль, соответствующий вашему дизайну', 'ewc'); ?>
       </p>
-      <a class="button intro__button" href="/try"><?php _e('Попробовать бесплатно', 'ecw'); ?></a>
+      <a class="button intro__button" href="#generator"><?php _e('Попробовать бесплатно', 'ewc'); ?></a>
     </div>
     <div class="intro__image">
       <picture>
@@ -77,10 +77,10 @@ get_header();
     <div class="presentation__text">
       <div class="presentation__text-inner">
         <h2 class="presentation__headline headline">
-          <?php _e('Посмотрите видеопрезентацию виджета', 'ecw'); ?>
+          <?php _e('Посмотрите видеопрезентацию виджета', 'ewc'); ?>
         </h2>
         <div class="presentation__subtext">
-          <?php _e('Посмотрите небольшой ролик и&nbsp;узнайте больше о&nbsp;работе нашего виджета', 'ecw'); ?>
+          <?php _e('Посмотрите небольшой ролик и&nbsp;узнайте больше о&nbsp;работе нашего виджета', 'ewc'); ?>
         </div>
       </div>
     </div>
@@ -124,7 +124,7 @@ get_header();
 </section>
 <section class="features" id="features">
   <div class="features__container container">
-    <h2 class="features__headline headline" id="features"><?php _e('Возможности виджета', 'ecw') ?></h2>
+    <h2 class="features__headline headline" id="features"><?php _e('Возможности виджета', 'ewc') ?></h2>
     <ul class="features__list">
       <li class="features__item">
         <div class="features__icon">
@@ -150,10 +150,10 @@ get_header();
           </svg>
         </div>
         <h3 class="features__subheading">
-          <?php _e('Установка на любой сайт', 'ecw') ?>
+          <?php _e('Установка на любой сайт', 'ewc') ?>
         </h3>
         <div class="features__text">
-          <?php _e('Короткое описание для того, что бы пункт не выбивался из контекста', 'ecw') ?>
+          <?php _e('Короткое описание для того, что бы пункт не выбивался из контекста', 'ewc') ?>
         </div>
       </li>
       <li class="features__item">
@@ -184,10 +184,10 @@ get_header();
           </svg>
         </div>
         <h3 class="features__subheading">
-          <?php _e('Адаптивность', 'ecw') ?>
+          <?php _e('Адаптивность', 'ewc') ?>
         </h3>
         <div class="features__text">
-          <?php _e('Корректное отображение на любых устройствах', 'ecw') ?>
+          <?php _e('Корректное отображение на любых устройствах', 'ewc') ?>
         </div>
       </li>
       <li class="features__item">
@@ -223,10 +223,10 @@ get_header();
           </svg>
         </div>
         <h3 class="features__subheading">
-          <?php _e('Мультиязыковая поддержка', 'ecw') ?>
+          <?php _e('Мультиязыковая поддержка', 'ewc') ?>
         </h3>
         <div class="features__text">
-          <?php _e('Доступен интерфейс на 3-х языках: немецком, испанском и английском', 'ecw') ?>
+          <?php _e('Доступен интерфейс на 3-х языках: немецком, испанском и английском', 'ewc') ?>
         </div>
       </li>
       <li class="features__item">
@@ -241,10 +241,10 @@ get_header();
           </svg>
         </div>
         <h3 class="features__subheading">
-          <?php _e('Кастомизация', 'ecw') ?>
+          <?php _e('Кастомизация', 'ewc') ?>
         </h3>
         <div class="features__text">
-          <?php _e('Возможность изменения цвета кнопки, текста, иконки, отложенного показа и скрытия на определенных страницах', 'ecw') ?>
+          <?php _e('Возможность изменения цвета кнопки, текста, иконки, отложенного показа и скрытия на определенных страницах', 'ewc') ?>
         </div>
       </li>
       <li class="features__item">
@@ -262,10 +262,10 @@ get_header();
           </svg>
         </div>
         <h3 class="features__subheading">
-          <?php _e('Минимальная нагрузка на сайт', 'ecw') ?>
+          <?php _e('Минимальная нагрузка на сайт', 'ewc') ?>
         </h3>
         <div class="features__text">
-          <?php _e('Возможность изменения цвета кнопки, текста, иконки, отложенного показа и скрытия на определенных страницах', 'ecw') ?>
+          <?php _e('Возможность изменения цвета кнопки, текста, иконки, отложенного показа и скрытия на определенных страницах', 'ewc') ?>
         </div>
       </li>
       <li class="features__item">
@@ -291,10 +291,10 @@ get_header();
           </svg>
         </div>
         <h3 class="features__subheading">
-          <?php _e('Поддержка всех популярных социальных сетей', 'ecw') ?>
+          <?php _e('Поддержка всех популярных социальных сетей', 'ewc') ?>
         </h3>
         <div class="features__text">
-          <?php _e('Facebook, Instagram, X, Telegram, WhatsApp и др.', 'ecw') ?>
+          <?php _e('Facebook, Instagram, X, Telegram, WhatsApp и др.', 'ewc') ?>
         </div>
       </li>
     </ul>
@@ -303,10 +303,10 @@ get_header();
 <section class="generator" id="generator">
   <div class="generator__container container">
     <h2 class="generator__headline headline">
-      <?php _e('Создайте свой уникальный виджет для вашего сайта', 'ecw') ?>
+      <?php _e('Создайте свой уникальный виджет для вашего сайта', 'ewc') ?>
     </h2>
     <div class="generator__subtext">
-      <?php _e('Посмотрите как будет выглядеть виджет для вашего сайта', 'ecw') ?>
+      <?php _e('Посмотрите как будет выглядеть виджет для вашего сайта', 'ewc') ?>
     </div>
     <div class="generator__body" style="position: relative;">
       <form class="quiz__form" action="sendmail.php" method="post">
@@ -427,25 +427,52 @@ get_header();
                 </p>
                 <fieldset class="quiz__fieldset  quiz__fieldset--message">
                   <div class="quiz__wrap-label">
-                    <input class="quiz__input" type="radio" name="quiz-message" id="quiz-message--1" value="facebook">
-                    <label class="quiz__label" for="quiz-message--facebook">
+                    <input class="quiz__input" type="radio" name="quiz-message" id="quiz-message--1">
+                    <label class="quiz__label" for="quiz-message--1">
                       Остались вопросы?
                       <span>Пишите в WhatsApp</span>
                     </label>
                   </div>
                   <div class="quiz__wrap-label">
-                    <input class="quiz__input" type="radio" name="quiz-message" id="quiz-message--2" value="facebook">
-                    <label class="quiz__label" for="quiz-message--facebook">
+                    <input class="quiz__input" type="radio" name="quiz-message" id="quiz-message--2">
+                    <label class="quiz__label" for="quiz-message--2">
                       Нужна помощь?
                       <span>Пишите в WhatsApp</span>
                     </label>
                   </div>
                   <div class="quiz__wrap-label">
-                    <input class="quiz__input" type="radio" name="quiz-message" id="quiz-message--2" value="facebook">
-                    <label class="quiz__label" for="quiz-message--facebook">
+                    <input class="quiz__input" type="radio" name="quiz-message" id="quiz-message--3">
+                    <label class="quiz__label" for="quiz-message--3">
                       Есть вопросы
                       <span>Пишите в WhatsApp</span>
                     </label>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="swiper-slide quiz__slide">
+              <div class="quiz__content">
+                <p class="quiz__title quiz__title--offer">
+                  Получите 30 дней бесплатно (карта не нужна)
+                </p>
+                <fieldset class="quiz__fieldset">
+                  <div class="quiz__wrap-label">
+                    <button class="button button--accent quiz__button next-slide-button" type="button">
+                      Подключить
+                    </button>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="swiper-slide quiz__slide">
+              <div class="quiz__content">
+                <p class="quiz__title quiz__title--offer">
+                  Инструкция по установке виджета
+                </p>
+                <fieldset class="quiz__fieldset">
+                  <div class="quiz__wrap-label">
+                    Здесь будет код для установки
+                    Здесь по шагам как установить
                   </div>
                 </fieldset>
               </div>
@@ -454,76 +481,6 @@ get_header();
         </div>
       </form>
     </div>
-  </div>
-</section>
-<section class="reviews" id="reviews" style="display: none;">
-  <div class="reviews__container container">
-    <h2 class="reviews__headline headline">
-      <?php _e('Отзывы клиентов', 'ecw') ?>
-    </h2>
-    <div class="reviews__subtext">
-      <?php _e('Рецензии и истории успеха
-реальных пользователей', 'ecw') ?>
-    </div>
-    <div class="reviews__body">
-      <div class="swiper reviews__video">
-        <div class="swiper-wrapper reviews__slider-wrap">
-          <div class="swiper-slide reviews__slider-slide">
-            <picture>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/4x3.jpg" alt="">
-            </picture>
-          </div>
-          <div class="swiper-slide reviews__slider-slide">
-            <picture>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/4x3.jpg" alt="">
-            </picture>
-          </div>
-          <div class="swiper-slide reviews__slider-slide">
-            <picture>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/4x3.jpg" alt="">
-            </picture>
-          </div>
-          <div class="swiper-slide reviews__slider-slide">
-            <picture>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/4x3.jpg" alt="">
-            </picture>
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev reviews__slider-control"></div>
-        <div class="swiper-button-next reviews__slider-control"></div>
-      </div>
-      <ul class="reviews__text">
-        <li class="reviews__item">
-          <div class="reviews__item-inner">
-            <div class="reviews__user-avatar">
-              <img src="https://placehold.co/120" width="120" height="120" alt="">
-            </div>
-            <div class="reviews__item-content">
-              <h3 class="reviews__author-name">
-                Ирина Иванова
-                <a href="#">
-                  <svg width="42" height="42">
-                    <use xlink:href=" #icon-facebook"></use>
-                  </svg>
-                </a>
-              </h3>
-              <time datetime="2018-07-07">11 Августа 2024</time>
-              <div class="reviews__comment">
-                Нет ничего проще, чем
-                добавить на сайт фото
-                из Инстаграм. С нашим
-                Instagram плагином вы
-                можете <a href="#">Подробнее</a>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <a href="#reviews" class="reviews__button button">
-      <?php _e('Оставить отзыв', 'ecw') ?>
-    </a>
   </div>
 </section>
 <section class="security" id="security">
@@ -690,7 +647,6 @@ get_header();
     </ul>
   </div>
 </section>
-
 <section class="faq" id="faq">
   <div class="container faq__container">
     <h2 class="faq__headline headline">

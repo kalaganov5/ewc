@@ -84,21 +84,21 @@ function register_faq_post_type()
 {
   $labels = array(
     'name'              =>
-    __('FAQ', 'ecw'),
+    __('FAQ', 'ewc'),
     'singular_name'     =>
-    __('FAQ', 'ecw'),
+    __('FAQ', 'ewc'),
     'add_new'           =>
-    __('Add', 'ecw'),
+    __('Add', 'ewc'),
     'add_new_item'      =>
-    __('Add', 'ecw'),
+    __('Add', 'ewc'),
     'edit_item'         =>
-    __('Edit', 'ecw'),
+    __('Edit', 'ewc'),
     'new_item'          =>
-    __('Add New', 'ecw'),
+    __('Add New', 'ewc'),
     'view_item'         =>
-    __('View', 'ecw'),
+    __('View', 'ewc'),
     'parent_item_colon' => '',
-    'menu_name'         => __('FAQ', 'ecw'),
+    'menu_name'         => __('FAQ', 'ewc'),
   );
 
   $args = array(

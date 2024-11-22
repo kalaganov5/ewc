@@ -44,7 +44,7 @@
   <div class="footer__container container">
     <div class="footer__top">
       <div class="footer__headline">
-        <?php _e('Присоеденяйтесь к&nbsp;нам:', 'ecw'); ?>
+        <?php _e('Присоеденяйтесь к&nbsp;нам:', 'ewc'); ?>
       </div>
       <ul class="footer__social social">
         <li class="social__item">

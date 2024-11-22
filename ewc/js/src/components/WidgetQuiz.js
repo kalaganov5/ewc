@@ -23,6 +23,7 @@ export class WidgetQuiz {
       allowTouchMove: false,
       spaceBetween: 40,
       slidesPerView: 1,
+      autoHeight: true,
     });
     this.#formRadioHandler();
   };
@@ -33,16 +34,28 @@ export class WidgetQuiz {
     const nextButtons = this.#form.querySelectorAll(".next-slide-button");
     const userAccount = this.#form.querySelector('#quiz-social-account');
 
+    console.log(radios);
+
     for (let i = 0, max = radios.length; i < max; i++) {
-      radios[i].onclick = () => {
+      radios[i].addEventListener('change', () => {
         if (radios[i].name === "quiz-social") {
           const socialName = radios[i].value;
           this.#widgetObject.social = socialName;
         }
 
+        if (radios[i].name === "quiz-message") {
+          //TODO const socialMessage = radios[i].value;
+          // Добавляем в
+          //TODO this.#widgetObject["text-cta"] = '';
+          //TODO this.#widgetObject["text-offer"] = '';
+        }
+
         setTimeout(() => {
           this.#slider.slideNext();
         }, 500);
+      });
+      radios[i].onclick = () => {
+        
       };
     }
 
