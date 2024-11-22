@@ -1,7 +1,7 @@
 {
-  "name": "wp-barebone-theme-webpack5-sass",
+  "name": "ewc",
   "version": "1.1.0",
-  "description": "Barebones WordPress theme with CSS/SASS and JavaScript compiled using webpack 5.",
+  "description": "Виджет социальной сети для веб-сайта. Вы можете поставить виджет мессенджера или социальной сети на ваш сайт. Выбрать визуальный стиль под ваш сайт.",
   "main": "js/build/main.js",
   "scripts": {
     "build": "webpack --mode development",
